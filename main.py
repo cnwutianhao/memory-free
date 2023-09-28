@@ -1,6 +1,9 @@
+import gc
 import os
 import signal
 import sys
+import time
+
 import platform
 import psutil
 
@@ -30,6 +33,9 @@ def free_mem_win():
         if status in ['zombie', 'stopped']:
             print(f"{proc.name()} is currently {proc.status()}, mem usage {proc.memory_info().rss / 1024 / 1024:.2f}MB")
             proc.kill()
+
+    # sleep 2秒，让系统稳定后再获取内存数据
+    time.sleep(2)
 
     # 释放后内存占用
     post_mem = psutil.virtual_memory()
@@ -77,6 +83,12 @@ def free_mem_linux():
             os.kill(int(pid), signal.SIGKILL)
         except IOError:
             continue
+
+    # 执行垃圾回收
+    gc.collect()
+
+    # sleep 2秒，让系统稳定后再获取内存数据
+    time.sleep(2)
 
     # 释放后内存占用
     post_mem = psutil.virtual_memory()
