@@ -54,7 +54,7 @@ On Windows, Linux, and macOS operating systems, Memory Free is a standalone tool
   kworker/u256:13-events_unbound is currently idle, mem usage 0.00MB
   kworker/u256:14-events_unbound is currently idle, mem usage 0.00MB
   ...
-  After free: Used mem 1119.88MB / Total mem 19488.50MB
+  After free: Used mem 1009.88MB / Total mem 19488.50MB
   Memory Free completed. Press Enter key to exit...
   ```
 
