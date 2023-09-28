@@ -8,7 +8,7 @@ import psutil
 def free_mem_win():
     print("Current operating system is Windows")
 
-    confirm = input("Do you want to start memory cleanup? (y/n): ")
+    confirm = input("Do you want to start memory free? (y/n): ")
     if confirm != 'y':
         return
 
@@ -43,7 +43,7 @@ def free_mem_win():
 def free_mem_linux():
     print("Current operating system is Linux")
 
-    confirm = input("Do you want to start memory cleanup? (y/n): ")
+    confirm = input("Do you want to start memory free? (y/n): ")
     if confirm != 'y':
         return
 
@@ -90,7 +90,7 @@ def free_mem_linux():
 def free_mem_mac():
     print("Current operating system is macOS")
 
-    confirm = input("Do you want to start memory cleanup? (y/n): ")
+    confirm = input("Do you want to start memory free? (y/n): ")
     if confirm != 'y':
         return
 
