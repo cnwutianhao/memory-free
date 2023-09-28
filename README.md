@@ -1,2 +1,4 @@
-# memory-free
-Memory Free is a cross-platform utility that facilitates efficient memory management on Windows, Linux, and macOS operating systems. This repository provides a set of tools and resources to help developers implement memory release functionality within their applications.
+# Memory Free
+
+### Description
+Memory Free is a standalone application designed to facilitate efficient memory management and memory release on Windows, Linux, and macOS operating systems. This repository provides the complete source code and resources necessary to build and run the Memory Free application.
