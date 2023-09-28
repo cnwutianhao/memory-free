@@ -37,7 +37,7 @@ def free_mem_win():
     post_used = post_mem.used - own_mem_used
     print(f"After free: Used mem {post_used / 1024 / 1024:.2f}MB / Total mem {post_total / 1024 / 1024:.2f}MB")
 
-    input("Memory Free completed. Press any key to exit...")
+    input("Memory Free completed. Press Enter key to exit...")
 
 
 def free_mem_linux():
@@ -84,7 +84,7 @@ def free_mem_linux():
     post_used = post_mem.used - own_mem
     print(f"After free: Used mem {post_used / 1024 / 1024:.2f}MB / Total mem {post_total / 1024 / 1024:.2f}MB")
 
-    input("Memory Free completed. Press any key to exit...")
+    input("Memory Free completed. Press Enter key to exit...")
 
 
 def free_mem_mac():
@@ -94,7 +94,7 @@ def free_mem_mac():
     if confirm != 'y':
         return
 
-    input("Memory Free completed. Press any key to exit...")
+    input("Memory Free completed. Press Enter key to exit...")
 
 
 def get_platform():
