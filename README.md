@@ -22,7 +22,9 @@ On Windows, Linux, and macOS operating systems, Memory Free is a standalone tool
 
 + macOS
   ```
-  TODO
+  pip install psutil
+  pip install pyinstaller
+  pyinstaller -F --name MemoryFree main.py
   ```
 
 ## Run
