@@ -1,6 +1,7 @@
 import gc
 import os
 import signal
+import subprocess
 import sys
 import time
 
@@ -105,6 +106,32 @@ def free_mem_mac():
     confirm = input("Do you want to start memory free? (y/n): ")
     if confirm != 'y':
         return
+
+    # 程序本身占用的内存
+    own_process = psutil.Process()
+    own_mem_info = own_process.memory_info()
+    own_mem_used = own_mem_info.rss
+
+    # 释放前内存占用
+    pre_free_mem = psutil.virtual_memory()
+    pre_free_total = pre_free_mem.total
+    pre_free_used = pre_free_mem.used - own_mem_used
+    print(f"Before free: Used mem {pre_free_used / 1024 / 1024:.2f}MB / Total mem {pre_free_total / 1024 / 1024:.2f}MB")
+
+    try:
+        subprocess.run(["purge", "-c"], check=True)
+    except subprocess.CalledProcessError as e:
+        print("Error occurred while executing memory freeing command:", e)
+        return
+
+    # sleep 2秒，让系统稳定后再获取内存数据
+    time.sleep(2)
+
+    # 释放后内存占用
+    post_mem = psutil.virtual_memory()
+    post_total = post_mem.total
+    post_used = post_mem.used - own_mem_used
+    print(f"After free: Used mem {post_used / 1024 / 1024:.2f}MB / Total mem {post_total / 1024 / 1024:.2f}MB")
 
     input("Memory Free completed. Press Enter key to exit...")
 
