@@ -62,7 +62,11 @@ On Windows, Linux, and macOS operating systems, Memory Free is a standalone tool
 
 + macOS
   ```
-  TODO
+  Current operating system is macOS
+  Do you want to start memory free? (y/n): y
+  Before free: Used mem 4475.51MB / Total mem 16384.00MB
+  After free: Used mem 4189.16MB / Total mem 16384.00MB
+  Memory Free completed. Press Enter key to exit...
   ```
 
 ## License
