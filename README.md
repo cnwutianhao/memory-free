@@ -27,6 +27,15 @@ On Windows, Linux, and macOS operating systems, Memory Free is a standalone tool
   pyinstaller -F --name MemoryFree main.py
   ```
 
+## Try
+[![Download](https://img.shields.io/badge/Download-Click%20Here-blue.svg)](https://github.com/cnwutianhao/memory-free/releases)
+<br />
+For the Windows version, can be run with a simple double-click. 
+<br />
+For the Linux version, execute it in the terminal.
+<br />
+For the macOS version, run it in the terminal with administrator privileges.
+
 ## Run
 
 + Windows
