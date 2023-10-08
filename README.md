@@ -78,6 +78,9 @@ For the macOS version, run it in the terminal with administrator privileges.
   Memory Free completed. Press Enter key to exit...
   ```
 
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=cnwutianhao/memory-free&type=Date)](https://star-history.com/#cnwutianhao/memory-free&Date)
+
 ## License
 
 ```
